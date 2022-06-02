@@ -14,8 +14,8 @@ cuando no lo sea, sin utilizar módulo. (%)
 def par_e_impar(numero):
     """
     Esta función se encarga de determinar si un número es par o impar.
-    Precondicion: Se espera un número entero positivo
-    Postcondicion: Se devuelve un valor booleano, True o False
+    Precondicion: Se espera un número entero
+    Postcondicion: Se devuelve un valor booleano, True para pares False para impares
     """
     mitad = numero // 2
     suma = mitad + mitad
@@ -23,9 +23,6 @@ def par_e_impar(numero):
         return(True)
     else:
         return(False)
-
-
-(par_e_impar(25))
 
 
 def principal():
