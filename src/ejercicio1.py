@@ -20,9 +20,10 @@ def par_e_impar(numero):
     mitad = numero // 2
     suma = mitad + mitad
     if suma == numero:
-        return(True)
+        resultado=bool(True)
     else:
-        return(False)
+        resultado=bool(False)
+    return resultado
 
 
 def principal():
@@ -31,7 +32,7 @@ def principal():
     (La entrada, la llamada al algoritmo y la salida)
     entrada = 20
     resultado = par_e_impar(numero)
-    salida = un valor booleano 
+    salida = un valor booleano
     """
 
 
