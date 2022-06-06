@@ -3,7 +3,7 @@
 # UNRN Andina - Introducción a la Ingenieria en Computación
 ################
 
-from ejercicio1.py import par_e_impar
+from ejercicio1 import par_e_impar
 
 """
 Describir aquí que es lo que se esta probando.
