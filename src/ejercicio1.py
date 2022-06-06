@@ -31,7 +31,7 @@ def principal():
     Esta función es la que se encarga de la parte 'interactiva' del ejercicio
     (La entrada, la llamada al algoritmo y la salida)
     """
-    numero = int(input("Ingrese un número"))
+    numero = int(input("Ingrese un número: "))
     resultado = par_e_impar(numero)
     print(f"{resultado}")
 
