@@ -20,9 +20,9 @@ def par_e_impar(numero):
     mitad = numero // 2
     suma = mitad + mitad
     if suma == numero:
-        resultado=bool(True)
+        resultado = bool(True)
     else:
-        resultado=bool(False)
+        resultado = bool(False)
     return resultado
 
 
@@ -30,10 +30,10 @@ def principal():
     """
     Esta función es la que se encarga de la parte 'interactiva' del ejercicio
     (La entrada, la llamada al algoritmo y la salida)
-    entrada = 20
-    resultado = par_e_impar(numero)
-    salida = un valor booleano
     """
+    numero = int(input("Ingrese un número"))
+    resultado = par_e_impar(numero)
+    print(f"{resultado}")
 
 
 if __name__ == "__main__":
