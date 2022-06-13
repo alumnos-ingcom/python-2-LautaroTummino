@@ -20,6 +20,7 @@ def test_par_e_impar_positivos():
     resultado = par_e_impar(numero)
     assert isinstance(resultado, bool), "El resultado debe ser un valor booleano"
     assert resultado == True, "True por que el numero es primo"
+    
 
 
 def test_par_e_impar_negativos():
@@ -30,3 +31,4 @@ def test_par_e_impar_negativos():
     resultado = par_e_impar(numero)
     assert isinstance(resultado, bool), "El resultado debe ser un valor booleano"
     assert resultado == False, "False por que no lo es"
+    
