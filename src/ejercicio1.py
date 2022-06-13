@@ -11,7 +11,7 @@ cuando no lo sea, sin utilizar módulo. (%)
 """
 
 
-def par_e_impar(numero):
+def es_par_es_impar(numero):
     """
     Esta función se encarga de determinar si un número es par o impar.
     Precondicion: Se espera un número entero
@@ -20,10 +20,10 @@ def par_e_impar(numero):
     mitad = numero // 2
     suma = mitad + mitad
     if suma == numero:
-        resultado = bool(True)
+        return True
     else:
-        resultado = bool(False)
-    return resultado
+        return False
+    
 
 
 def principal():
@@ -32,7 +32,7 @@ def principal():
     (La entrada, la llamada al algoritmo y la salida)
     """
     numero = int(input("Ingrese un número: "))
-    resultado = par_e_impar(numero)
+    resultado = es_par_es_impar(numero)
     print(f"{resultado}")
 
 
