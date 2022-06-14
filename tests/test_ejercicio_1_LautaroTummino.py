@@ -12,7 +12,7 @@ que el archivo a probar agregando antes `test_`
 """
 
 
-def test_par_e_impar_positivos():
+def test_es_par_es_impar_positivos():
     """
     Esta función testeara ls funcion de pares e impares positivos, ejercicio N°1
     """
@@ -23,7 +23,7 @@ def test_par_e_impar_positivos():
     
 
 
-def test_par_e_impar_negativos():
+def test_es_par_es_impar_negativos():
     """
     Esta función testeara las funcion de pares e impares negativos, ejercicio N°1
     """

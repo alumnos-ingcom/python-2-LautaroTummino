@@ -1,3 +1,8 @@
+################
+# Lautaro Tummino - @LautaroTummino
+# UNRN Andina - Introducción a la Ingenieria en Computación
+################
+
 """
 2. Estadísticas
 Implementar una función que obtenga los máximos,
@@ -7,81 +12,83 @@ Sin utilizar lazos for o las funciones integradas del lenguaje que procesan secu
 """
 
 
-def maximo(notas):
+def maximo_tupla(notas):
     """
-    Esta función se encarga de determinar el valor maximo de una lista númerica
-    Precondicion: Ingresar una lista de números [1,2,5,8,9]
-    Postcondicion: Regresar el número mayor [9]
+    Esta función se encarga de determinar el valor maximo de una lista numérica
+    Precondición: Ingresar una lista o tupla numérica
+    Postcondición: Mostrar en pantalla el numero mayor
     """
-    longi=len(notas)
-    mayor=notas[0]
-    i=0
-    notas = notas
-    while i < longi:
-        if notas[i] > mayor:
-            mayor = notas[i]
-        i+=1
+    #notas = list(notas)
+    rango = 0
+    longitud = len(notas)
+    mayor = notas[0]
+    while rango < longitud:
+        if notas[rango] > mayor:
+            mayor = notas[rango]
+        rango += 1
     return mayor
 
 
-def minimo(notas):
+def minimo_tupla(notas):
     """
     Esta función se encarga de determinar el valor minimo de una lista númerica
-    Precondicion: Ingresar una lista de números [1,2,5,8,9]
-    Postcondicion: Regresar el número mayor [1]
+    Precondición: Ingresar una lista o tupla númerica
+    Postcondición: Mostrar en pantalla el numero menor
     """
-    longi=len(notas)
-    menor=notas[0]
-    i=0
-    resultado= []
-    while i < longi:
-        if notas[i] < menor:
-            menor = notas[i]
-        i+=1
+    #notas = list(notas)
+    rango = 0
+    longitud = len(notas)
+    menor = notas[0]
+    while rango < longitud:
+        if notas[rango] < menor:
+            menor = notas[rango]
+        rango +=1
     return menor
 
 
-def suma(notas):
+def sumando_tupla(notas):
     """
-    Esta función se numar todos los numeros dentro de una lista
-    Precondicion: Ingresar una lista númerica
-    Postcondicion : El resultado de la suma de los numeros
+    Esta función se encarga de sumar todos los valores de una lista númerica
+    Precondición: Ingresar una lista o tupla númerica
+    Postcondición: Mostrar la suma de todos los números
     """
-    suma = (0)
-    rango = len(notas)
-    contador = (0)
-    while contador < rango:
-        suma = suma + notas[contador]
-        contador = contador + 1
-        resultado = (suma)
-    return resultado
+    total = 0
+    sumando = 0
+    longitud =len(notas)
+    rango = 0
+    while rango < longitud:
+        sumando += notas[rango]
+        rango += 1
+        total = sumando     
+    return total
+    
 
-
-
-
-def promedio(notas):
+def promedio_tupla(notas):
     """
-    Esta función encarga de hacer un promedio de toda una lista numerica, sumando
-    todos los numeros ingresados, y dividiendo por la misma cantidad de números
-    Precondicion: Ingresar una lista númerica
-    Postcondicion : El resultado de la suma de los numeros
+    Esta función se encarga de determinar el promedio de una lista numérica
+    llamando a la función suma, para luego realizar la division por la cantidad de numeros ingresados
+    Precondición: Ingresar una lista o tupla númerica
+    Postcondición: Mostrar el promedio de los números ingresados
     """
+    maximo = maximo_tupla(notas)
+    minimo = minimo_tupla(notas)
+    sumando = sumando_tupla(notas)
     cantidad_notas=len(notas)
-    prome = suma(notas) / cantidad_notas
-    result = prome
-    return result
+    prome = sumando / cantidad_notas
+    return prome
+
 
 def principal():
     """
     Esta función es la que se encarga de la parte 'interactiva' del ejercicio
     (La entrada, la llamada al algoritmo y la salida)
     """
-    notas=tuple(input("Ingrese una lista númerica ejemplo: [1,2,9,10]"))
-    maxi = maximo(notas)
-    mini = minimo(notas)
-    print(maxi)
-    
-
+    notas = (2,1,5,6,7,8,9)
+    maxi = maximo_tupla(notas) 
+    mini = minimo_tupla(notas)
+    sumando = sumando_tupla(notas)
+    promediar = promedio_tupla(notas)
+    print((mini,maxi,sumando,promediar))
 
 
 if __name__ == "__main__":
