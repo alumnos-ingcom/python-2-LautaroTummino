@@ -16,31 +16,26 @@ sucesión de Fibonacci. Siendo este número un entero positivo mayor a 2.
 
 def fibonacci(num):
     """
-    Esta función se encarga de encontrar el n-esimo número
-    de una secuencia númerica, siempre y cuando el número sea mayor a 2
-    Precondicion: Ingresar un número mayor a 2
+    Esta función se encarga de encontrar el n-esimo valor
+    de una sucesión fibonacci
+    Precondicion: Ingresar un número > 2 siendo este valor a corrobora
+    en la sucesión. 
     Postcondicion: Imprimir por pantalla el n-esimo termino.
     """
-    if num < 2:
-        print("Error, Intente con un numero mayor a 2")
+def fibonacci(num):
+    if num == 0:
+        return 0
+    if num == 1 or num == 2:
+        return 1
     else:
-        ant = num - 1
-        total = ant + num
-        result = []
-        while total < 1550000:
-            total = ant + num
-            ant = num
-            num = total
-            result = result + [num]
-    return result[8]
-
+        return fibonacci(num - 1) + fibonacci(num - 2)
 
 def principal():
     """
     Esta función es la que se encarga de la parte 'interactiva' del ejercicio
     (La entrada, la llamada al algoritmo y la salida)
     """
-    num = int(input("Ingrese un número N mayor que 2: "))
+    num = int(input("Ingrese un número: "))
     fibo = fibonacci(num)
     print(f"El n-esimo termino es: {fibo}")
 
