@@ -66,7 +66,8 @@ def sumando_tupla(notas):
 def promedio_tupla(notas):
     """
     Esta función se encarga de determinar el promedio de una lista numérica
-    llamando a la función suma, para luego realizar la division por la cantidad de numeros ingresados
+    llamando a la función suma, para luego realizar la division por la cantidad
+    de numeros ingresados en la lista
     Precondición: Ingresar una lista o tupla númerica
     Postcondición: Mostrar el promedio de los números ingresados
     """
@@ -82,8 +83,13 @@ def principal():
     """
     Esta función es la que se encarga de la parte 'interactiva' del ejercicio
     (La entrada, la llamada al algoritmo y la salida)
+    Esta función tiene un problema, y aun no logro resolverla, cuando la utilizo
+    en future coder, y el argumento se lo indico mediante listas o tuplas
+    el programa funcióna, cuando lo traigo a thony y intento que el usuario
+    ingrese un número me da un error que estoy sumando STR con INT pero no logro
+    encontrar la solución. 
     """
-    notas = (2,1,5,6,7,8,9)
+    notas = (2,1,5)
     maxi = maximo_tupla(notas) 
     mini = minimo_tupla(notas)
     sumando = sumando_tupla(notas)
