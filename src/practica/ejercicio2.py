@@ -14,11 +14,12 @@ Sin utilizar lazos for o las funciones integradas del lenguaje que procesan secu
 
 def maximo_tupla(notas):
     """
-    Esta función se encarga de determinar el valor maximo de una lista numérica
-    Precondición: Ingresar una lista o tupla numérica
+    Esta función se encarga de determinar el valor maximo de una secuencia
+    numérica.
+    Precondición: Ingresar una secuencia numérica: "2,4,5,10"
     Postcondición: Mostrar en pantalla el numero mayor
     """
-    #notas = list(notas)
+    #notas = notas.split(",")
     rango = 0
     longitud = len(notas)
     mayor = notas[0]
@@ -31,11 +32,11 @@ def maximo_tupla(notas):
 
 def minimo_tupla(notas):
     """
-    Esta función se encarga de determinar el valor minimo de una lista númerica
-    Precondición: Ingresar una lista o tupla númerica
+    Esta función se encarga de determinar el valor minimo de una secuencia númerica
+    Precondición: Ingresar una secuencia de numeros "2,4,5,6,10"
     Postcondición: Mostrar en pantalla el numero menor
     """
-    #notas = list(notas)
+    notas = notas.split(",")
     rango = 0
     longitud = len(notas)
     menor = notas[0]
@@ -48,53 +49,46 @@ def minimo_tupla(notas):
 
 def sumando_tupla(notas):
     """
-    Esta función se encarga de sumar todos los valores de una lista númerica
-    Precondición: Ingresar una lista o tupla númerica
-    Postcondición: Mostrar la suma de todos los números
+    Esta función se encarga de sumar todos los valores de una secuencia númerica
+    Precondición: Ingresar una secuencia numerica "2,10,9,8,7"
+    Postcondición: Mostrar resultado de la suma de todos los números  
     """
+    notas = notas.split(",")
     total = 0
     sumando = 0
     longitud =len(notas)
     rango = 0
     while rango < longitud:
-        sumando += notas[rango]
+        sumando += float(notas[rango])
         rango += 1
-        total = sumando     
+        total = sumando
     return total
-    
+
 
 def promedio_tupla(notas):
     """
-    Esta función se encarga de determinar el promedio de una lista numérica
+    Esta función se encarga de determinar el promedio de una secuencia numérica
     llamando a la función suma, para luego realizar la division por la cantidad
-    de numeros ingresados en la lista
-    Precondición: Ingresar una lista o tupla númerica
+    de numeros ingresados en la secuencia.
+    Precondición: Ingresar una secuencia numerica
     Postcondición: Mostrar el promedio de los números ingresados
-    """
-    maximo = maximo_tupla(notas)
-    minimo = minimo_tupla(notas)
+    """  
     sumando = sumando_tupla(notas)
-    cantidad_notas=len(notas)
-    prome = sumando / cantidad_notas
-    return prome
+    cantidad_notas= notas.split(",")
+    return sumando / len(cantidad_notas)
 
 
 def principal():
     """
     Esta función es la que se encarga de la parte 'interactiva' del ejercicio
     (La entrada, la llamada al algoritmo y la salida)
-    Esta función tiene un problema, y aun no logro resolverla, cuando la utilizo
-    en future coder, y el argumento se lo indico mediante listas o tuplas
-    el programa funcióna, cuando lo traigo a thony y intento que el usuario
-    ingrese un número me da un error que estoy sumando STR con INT pero no logro
-    encontrar la solución. 
     """
-    notas = (2,1,5)
+    notas = input("Ingrese una secuencia numerica, ej 2,5,10 : ")
     maxi = maximo_tupla(notas) 
     mini = minimo_tupla(notas)
     sumando = sumando_tupla(notas)
     promediar = promedio_tupla(notas)
-    print((mini,maxi,sumando,promediar))
+    print((mini,maxi,sumando,f"{promediar:.2f}"))
 
 
 if __name__ == "__main__":

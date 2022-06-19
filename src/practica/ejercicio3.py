@@ -21,6 +21,14 @@ de la superposición.
 
 
 def compara_cadenas(cadena_uno, cadena_dos):
+    """
+    Esta función se encarga de comparar la superposición en dos cadenas
+    mostrando una tupla con la cantidad de veces que se superponen, en que
+    caracteres se superponen, y mostrando 1 si hay superposicion y 0 si no
+    la hay.
+    Precondicion: ingresar dos cadenas de texto
+    Postcondicion: Muestra tupla con los valores de la comparación
+    """
     cadena=list(cadena_uno)
     cadena1=list(cadena_dos)
     cantidad = 0
@@ -32,12 +40,10 @@ def compara_cadenas(cadena_uno, cadena_dos):
             superposicion = 1
             cantidad += 1
             total = total + [i]
-            msg =(f"La superposicion es: {superposicion}, por que las cadenas se superponen un total de {cantidad} vez/veces, en los caracteres: {total}")
-            
+            msg = (superposicion,cantidad,total)
         else:
             superposicion = 0
-            msg =(f"La superposicion es: {superposicion}, por que las cadenas son distintas")
-            
+            msg = (superposicion)          
         i += 1
     return msg
 
@@ -51,6 +57,7 @@ def principal():
     cadena_dos = str(input("Ingrese una cadena"))
     compara = compara_cadenas(cadena_uno, cadena_dos)
     print(f"{compara}")
+
 
 if __name__ == "__main__":
     principal()

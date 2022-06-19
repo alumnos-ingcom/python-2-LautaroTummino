@@ -18,11 +18,10 @@ def fibonacci(num):
     """
     Esta función se encarga de encontrar el n-esimo valor
     de una sucesión fibonacci
-    Precondicion: Ingresar un número > 2 siendo este valor a corrobora
+    Precondicion: Ingresar un número > 2 siendo este valor a corroborar
     en la sucesión. 
     Postcondicion: Imprimir por pantalla el n-esimo termino.
     """
-def fibonacci(num):
     if num == 0:
         return 0
     if num == 1 or num == 2:
@@ -37,7 +36,7 @@ def principal():
     """
     num = int(input("Ingrese un número: "))
     fibo = fibonacci(num)
-    print(f"El n-esimo termino es: {fibo}")
+    print(fibo)
 
 
 if __name__ == "__main__":

@@ -3,12 +3,11 @@
 # UNRN Andina - Introducción a la Ingenieria en Computación
 ################
 
-from ejercicio1 import par_e_impar
+from practica.ejercicio1 import es_par_es_impar
 
 """
-Describir aquí que es lo que se esta probando.
-Tengan en cuenta que el archivo tiene que llamarse igual
-que el archivo a probar agregando antes `test_`
+Se realiza una prueba de un numero entero positivo par,
+y tambien se realiza el mismo caso de prueba pero con un numero negativo
 """
 
 
@@ -17,9 +16,9 @@ def test_es_par_es_impar_positivos():
     Esta función testeara ls funcion de pares e impares positivos, ejercicio N°1
     """
     numero = 10
-    resultado = par_e_impar(numero)
+    resultado = es_par_es_impar(numero)
     assert isinstance(resultado, bool), "El resultado debe ser un valor booleano"
-    assert resultado == True, "True por que el numero es primo"
+    assert resultado is True, "True el numero es primo"
 
 
 def test_es_par_es_impar_negativos():
@@ -27,6 +26,6 @@ def test_es_par_es_impar_negativos():
     Esta función testeara las funcion de pares e impares negativos, ejercicio N°1
     """
     numero = -15
-    resultado = par_e_impar(numero)
+    resultado = es_par_es_impar(numero)
     assert isinstance(resultado, bool), "El resultado debe ser un valor booleano"
-    assert resultado == False, "False por que no lo es"
+    assert resultado is False, "False no lo es"
